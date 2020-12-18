@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath .
+    ports:
+      - 27018:8000

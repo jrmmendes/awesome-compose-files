@@ -6,4 +6,4 @@ A collection of ready-to-use Docker Compose Files for common services (mongodb, 
 
 2 - Edit the file variables to match your needs;
 
-3 - Run `docker-compose -f service.compose.yml up`;
+3 - Run the service with `docker-compose -f service.compose.yml up`;

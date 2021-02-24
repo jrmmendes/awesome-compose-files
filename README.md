@@ -7,3 +7,10 @@ A collection of ready-to-use Docker Compose Files for common services (mongodb, 
 2 - Edit the file variables to match your needs;
 
 3 - Run the service with `docker-compose -f service.compose.yml up`;
+
+# Contributing
+
+Just open a Pull Request with your file:
+- Put the file in the `/files` folder;
+- Name you file with the pattern `service.compose.yml`;
+- Use the latest Docker Compose spec (current: 3);

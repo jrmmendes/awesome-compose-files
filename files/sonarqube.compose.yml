@@ -1,0 +1,10 @@
+# SonarQube will be exposed at 27019 port
+version: '3.1'
+services:
+  sonarqube:
+  image: sonarqube
+  container_name: sonarqube-project-name
+  environment: 
+    - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true 
+  ports:
+    - 27019:9000

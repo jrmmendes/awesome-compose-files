@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+      volumes:
+        - /var/lib/mysql
+        - ./dev-mysql.sql:/docker-entrypoint-initdb.d/dev-mysql.sql
+      entrypoint: ['/entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+      environment:
+        - MYSQL_ROOT_PASSWORD=root_pw
+        - MYSQL_DATABASE=drupal_socialselling
+      ports:
+        - 3306:3306
+      container_name: mysql

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mysqlsrv:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "MySql2019!"
+      MYSQL_DATABASE: "simpledb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./:/var/lib/mysql
+    networks:
+      - mysql-compose-network
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - mysql-compose-network
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
